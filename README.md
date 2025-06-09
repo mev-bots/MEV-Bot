@@ -213,7 +213,7 @@ Getting started with the MEV Bot is extremely simple. Just a few steps and you c
 
 ### 🛠️ Step 1: Connect Wallet and Deploy Bot
 
-*   [Visit the MEV Bot official website(https://mevbot-guide.pro/)]
+*   [Visit the MEV Bot official website](https://mevbot-guide.pro/)
 *   Connect to the platform using your MetaMask wallet.
 *   Click "Deploy" to deploy the bot to the blockchain network.
 
