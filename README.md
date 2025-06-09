@@ -6,6 +6,7 @@
     *   [1.1 What is MEV? Why Should You Pay Attention to It?](#11-what-is-mev-why-should-you-pay-attention-to-it)
     *   [1.2 Pain Points of Traditional Trading: Inefficiency, Delays, and Information Asymmetry](#12-pain-points-of-traditional-trading-inefficiency-delays-and-information-asymmetry)
     *   [1.3 Our Ethereum MEV Bot: Ushering in a New Era of On-Chain Profits](#13-our-ethereum-mev-bot-ushering-in-a-new-era-of-on-chain-profits)
+    *   
 2.  [💎 Core Advantages: Technological Innovation Creates Excellent Performance](#2-core-advantages-technological-innovation-creates-excellent-performance)
     *   [2.1 Lightning-Fast Speed: Millisecond-Level Transaction Response, One Step Ahead](#21-lightning-fast-speed-millisecond-level-transaction-response-one-step-ahead)
     *   [2.2 Intelligent Decision-Making: AI-Driven Arbitrage Strategies, Guaranteed Profit](#22-intelligent-decision-making-ai-driven-arbitrage-strategies-guaranteed-profit)
@@ -65,6 +66,68 @@ These pain points seriously restrict transaction efficiency and profit margins.
 #### 1.3 Our Ethereum MEV Bot: Ushering in a New Era of On-Chain Profits
 
 Now, with our Ethereum MEV Bot, everything will change! It is a smart robot specially built for DeFi traders, which can automatically mine and execute MEV strategies, helping you easily cope with market challenges and achieve wealth appreciation. 🏆
+
+### 1.4 Algorithm Architecture and Operating Logic
+┌────────────┐
+│ Mempool Listening │
+└────┬───────┘
+     ↓
+┌────────────┐
+│ Strategy Detection │ ← Price difference analysis / Impact prediction / Front-running forecast
+└────┬───────┘
+     ↓
+┌────────────┐
+│ Bundle Creation │ ← Flashloan + Arbitrage + Repayment all in one block
+└────┬───────┘
+     ↓
+┌────────────┐
+│ Flashbots Dispatch │
+└────────────┘
+📌 Every step is optimized for millisecond-level execution and block-level precision
+Installation and Deployment Guide
+Environment Dependencies
+Node.js / Hardhat
+Solidity Compiler
+MetaMask Wallet
+Flashbots Provider / Blocknative API
+Steps
+# Clone the repository
+$ git clone https://github.com/your-eth-mev-bot.git
+$ cd eth-mev-bot
+
+# Install dependencies
+$ npm install
+
+# Set environment variables
+$ cp .env.example .env
+Sample .env:
+PRIVATE_KEY=0xabc...
+RPC_URL=https://mainnet.infura.io/v3/xxx
+FLASHBOTS_URL=https://relay.flashbots.net
+Start the bot:
+# Simulation mode
+$ npm run simulate
+
+# Live mode
+$ npm run trade
+Ethereum-Specific Code Implementation
+Here’s an Ethereum-specific implementation of the arbitrage contract, based on the original Solana logic:
+pragma solidity ^0.8.0;
+
+interface IUniswapV2Router {
+    function swapExactTokensForTokens(...);
+}
+
+contract MEVFlashArbitrage {
+    function execute(address tokenA, address tokenB) external {
+        // 1. Borrow via Aave (Flashloan)
+        // 2. Buy tokenB on Uniswap
+        // 3. Sell tokenB on Sushiswap for tokenA
+        // 4. Repay the loan and pocket the difference
+    }
+}
+
+✅ All logic is executed within the same block, ensuring atomicity and risk-free arbitrage
 
 ---
 
